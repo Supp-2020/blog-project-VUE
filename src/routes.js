@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from "vue-router";
+import { createRouter, createWebHashHistory } from "vue-router";
 import LandingPageComp from "./components/Landing Page/landingPage.vue";
 import CreatePostComp from "./components/createPost/createPost.vue";
 import AdminLoginComp from "./components/Admin Page/Admin Login/login.vue";
@@ -76,7 +76,7 @@ const routes = [
 
 // Create the router instance by using createRouter
 const router = createRouter({
-  history: createWebHistory(),
+  history: createWebHashHistory(),
   routes,
 });
 
