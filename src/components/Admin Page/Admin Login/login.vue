@@ -2,7 +2,7 @@
   <div className="login-container">
   <div  class="login">
     <img src="../../../assets/images/hi.png" alt="hi-icon" />
-    <h1>Welcome back!</h1>
+    <h1>Welcome back</h1>
     <p>Let's write something great</p>
     <p v-if="errorMessage" class="error-message">{{ errorMessage }}</p>
     <form @submit.prevent="handleSubmit">
