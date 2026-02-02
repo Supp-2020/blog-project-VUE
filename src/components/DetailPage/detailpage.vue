@@ -55,7 +55,7 @@
           <font-awesome-icon icon="fa-brands fa-pinterest" :style="{ color: '#ff0000', marginRight: '0.3em' }" size="2xl" />
           <font-awesome-icon icon="fa-regular fa-envelope" :style="{ color: '#6ba1ff' }" size="2xl" />
           <div class="right-sidebar-img">
-            <img src="../../assets/images/advertisement.png" alt="" />
+            <img src="../../assets/images/advertisement-temp.png" alt="" />
           </div>
         </aside>
   
