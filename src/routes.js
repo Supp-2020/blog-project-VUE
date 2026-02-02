@@ -7,7 +7,7 @@ import DetailPage from "./components/DetailPage/detailpage.vue";
 
 const routes = [
   // Path for the Landing Page First User Interface
-  { path: "/", component: LandingPageComp },
+  { path: "/", name:"landing-page", component: LandingPageComp },
 
   // Path for the Post details
   { path: "/detail-page/:postId", name: "detail-page", component: DetailPage },

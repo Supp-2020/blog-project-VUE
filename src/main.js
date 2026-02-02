@@ -44,7 +44,8 @@ library.add(faBars,faXmark,faSearch,faCircle,
     const isAppRerun = sessionStorage.getItem('isAppRerun');
     if (!isAppRerun) {
     if(!adminCredentials){
-      localStorage.setItem('isAdminLoggedIn',false);
+      // Bypass login
+      localStorage.setItem('isAdminLoggedIn',true);
       
     }
     sessionStorage.setItem('isAppRerun', true);

@@ -3,7 +3,7 @@
       <header class="header">
         <router-link to="/"><img id="logo" src="../../assets/images/headerlogo.png" alt="" /></router-link>
         <div>
-          <button class="red-btn"><b>Subscribe!</b></button>
+          <button class="red-btn" @click="navigateToCreatePost"><b>Create Post</b></button>
           <button class="search-landing">
             <font-awesome-icon icon="fa-solid fa-search" size="2xl" style="color: #000000;" />
           </button>
@@ -39,6 +39,9 @@
       },
       openHamburger() {
         this.isvisible = true;
+      },
+      navigateToCreatePost() {
+        this.$router.push({ name: "create-post" });
       },
     }
   };

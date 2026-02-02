@@ -178,6 +178,7 @@ export default {
       window.alert(
         `${this.isEditing ? "Updated" : "Added"} Blog Post Successfully!!!`
       );
+      this.$router.push({ name: "landing-page" });
     },
     // Function to load data of the post being edited
     loadEditedData() {

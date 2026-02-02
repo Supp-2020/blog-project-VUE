@@ -96,7 +96,7 @@
               </router-link>
               <button
               
-                :style="{ backgroundColor: categoryColor[post.postCategory] || 'crimson' }"
+                :style="{ backgroundColor: categoryColor[post.postCategory] ?? 'crimson' }"
               >
                 <font-awesome-icon
                   icon="fa-solid fa-circle"

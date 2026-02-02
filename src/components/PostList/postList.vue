@@ -1,6 +1,7 @@
 <template>
   <!-- Navigation Bar -->
   <div class="navbar">
+    <button class="landing-button" @click="navigateToLandingPage">Landing Page</button>
     <button class="red-btn nav-link" @click="navigateToCreatePost">Create Post</button>
     <LogOutComp/>
   </div>
@@ -153,6 +154,9 @@ export default {
     },
     navigateToCreatePost() {
       this.$router.push({ name: "create-post" });
+    },
+    navigateToLandingPage() {
+      this.$router.push({ name: "landing-page" });
     },
     /* Move to  Previous Page on Click */
     prevPage(){
