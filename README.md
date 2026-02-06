@@ -19,18 +19,6 @@ npm run serve
 ```
 npm run build
 ```
-
----
-
-## 🛠️ Core Capabilities
-
-- Real-time rich-text rendering
-- Section-based blog organisation
-- Dynamic image generation
-- Full CRUD operations
-- Pagination and filtering
-- Responsive UI
-
 ---
 
 ## ✨ Key Features
@@ -42,28 +30,20 @@ npm run build
   - Rich Text Editor body
 - Content is rendered **exactly as written**, preserving formatting, styles, and structure—just like writing blogs in real time.
 
----
-
 ### 🖼️ Dynamic Cover Images
 - Each blog automatically gets a **random high-quality image from Picsum**.
 - No manual image uploads required.
 - Keeps every blog visually engaging.
-
----
 
 ### 🏷️ Tags & Sections
 - Assign **multiple tags** for better categorisation.
 - Select a **section** (e.g., Tech, Lifestyle, Travel).
 - Blogs are automatically pushed and displayed under their respective section areas on the landing page.
 
----
-
 ### 🏠 Landing Page
 - Displays all published blogs in a clean, structured layout.
 - Section-based grouping for easy discovery.
 - Clicking a blog redirects to its **details page**.
-
----
 
 ### 📄 Blog Details Page
 - Dedicated page for each blog post.
@@ -73,8 +53,6 @@ npm run build
   - Tags and related metadata
 - Optimized for readability across devices.
 
----
-
 ### 📊 Admin Dashboard
 - Centralized dashboard to manage all blogs.
 - Includes:
@@ -83,15 +61,3 @@ npm run build
   - Edit existing blogs
   - Update content seamlessly
   - Delete blogs when required
-
----
-
-### 📱 Fully Responsive
-- Mobile-first design.
-- Works seamlessly across:
-  - Mobile phones
-  - Tablets
-  - Desktops
-
-
-
