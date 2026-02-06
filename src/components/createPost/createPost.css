@@ -59,8 +59,8 @@ body {
   }
   .post-image input{
     margin-top: 10px;
-    padding: 10px 0;
-    margin-left: 5px;
+    padding: 8px 12px;
+    /* margin-left: 5px; */
     width: 40%;
   }
   .post-body{

@@ -16,11 +16,13 @@
         <!-- Input fields for post details -->
         <div class="post-name">
           <label for="postName">Post Name</label>
-          <input v-model="formData.postName" type="text" name="postName" id="postName" placeholder="Post Name" required/>
+          <input v-model="formData.postName" type="text" name="postName" id="postName" placeholder="Post Name"
+            required />
         </div>
         <div class="post-description">
           <label for="shortDescription">Short Description</label>
-          <textarea v-model="formData.shortDescription" name="shortDescription" id="shortDescription" rows="4" placeholder="Add Description" required></textarea>
+          <textarea v-model="formData.shortDescription" name="shortDescription" id="shortDescription" rows="4"
+            placeholder="Add Description" required></textarea>
         </div>
         <div class="post-body">
           <label for="postBody">Post Body</label>
@@ -28,9 +30,10 @@
           <div ref="editor" style="height: 250px"></div>
         </div>
         <div class="post-image">
-          <label for="postImage">Upload Post Image Here</label><br />
-          <button>Choose File</button>
-          <input v-model="formData.postImage" name="postImage" type="text" id="postImage" accept=".jpg,jpeg,.png" placeholder="Paste Image URL" required/>
+          <label for="postImage">Random Blog Image</label><br />
+          <!--           <button>Choose File</button> -->
+          <input v-model="formData.postImage" name="postImage" type="text" id="postImage" accept=".jpg,jpeg,.png"
+            placeholder="" required />
         </div>
         <div class="type-category">
           <!-- Post type and category selection -->
@@ -60,7 +63,7 @@
         </div>
         <div class="post-featured">
           <!-- Checkbox for featured post -->
-          <input v-model="formData.isFeatured" type="checkbox" name="isFeatured" id="isFeatured"/>
+          <input v-model="formData.isFeatured" type="checkbox" name="isFeatured" id="isFeatured" />
           <label for="isFeatured"> Make this post featured ?</label>
         </div>
         <div>
@@ -89,7 +92,7 @@ export default {
         postName: "",
         shortDescription: "",
         postBody: "",
-        postImage: "",
+        postImage: `https://picsum.photos/800/1000?seed=200&t=${Date.now()}`,
         postType: "",
         postCategory: "",
         isFeatured: false,
@@ -109,36 +112,36 @@ export default {
   },
   mounted() {
     // Initialize Quill editor on component mount
-      this.initializeEditor();
+    this.initializeEditor();
   },
   methods: {
     // Function to initialize Quill editor
     initializeEditor() {
       // Quill editor initialization logic
-      if(!this.editor){ 
-      this.editor = new Quill(this.$refs.editor, {
-        theme: "snow",
-        modules: {
-          toolbar: [
-            [{ header: [1, 2, 3, 4, 5, 6, false] }],
-            ["bold", "italic", "underline", "strike"],
-            ["blockquote", "code-block"],
-            [{ list: "ordered" }, { list: "bullet" }],
-            [{ indent: "-1" }, { indent: "+1" }],
-            ["link", "image", "video"],
-            [{ align: [] }],
-            ["clean"],
-            [{ color: [] }, { background: [] }],
-            ["font", "size"],
-            ["script", "sub", "super"],
-          ],
-        },
-      });
-      // Event listener for editor text changes
-      this.editor.on("text-change", this.handleEditorChange);
+      if (!this.editor) {
+        this.editor = new Quill(this.$refs.editor, {
+          theme: "snow",
+          modules: {
+            toolbar: [
+              [{ header: [1, 2, 3, 4, 5, 6, false] }],
+              ["bold", "italic", "underline", "strike"],
+              ["blockquote", "code-block"],
+              [{ list: "ordered" }, { list: "bullet" }],
+              [{ indent: "-1" }, { indent: "+1" }],
+              ["link", "image", "video"],
+              [{ align: [] }],
+              ["clean"],
+              [{ color: [] }, { background: [] }],
+              ["font", "size"],
+              ["script", "sub", "super"],
+            ],
+          },
+        });
+        // Event listener for editor text changes
+        this.editor.on("text-change", this.handleEditorChange);
       }
     },
-     // Function to handle changes in the editor content
+    // Function to handle changes in the editor content
     handleEditorChange() {
       this.formData.postBody = this.editor.root.innerHTML;
     },
@@ -198,10 +201,10 @@ export default {
       if (postToEdit) {
         this.formData = { ...postToEdit };
         this.$nextTick(() => {
-       // Populate the editor with the post body content
-        this.initializeEditor();
-        this.editor.root.innerHTML = this.formData.postBody;
-      });
+          // Populate the editor with the post body content
+          this.initializeEditor();
+          this.editor.root.innerHTML = this.formData.postBody;
+        });
       } else {
         console.error(`Post with ID ${this.postIdToEdit} not found`);
       }
@@ -215,12 +218,12 @@ export default {
         existingData.sponsoredNews.push(updatedFormData)
       } else if (updatedFormData.postType === "Recent Post") {
         existingData.recentPosts.push(updatedFormData)
-      } 
+      }
 
       localStorage.setItem("createPost", JSON.stringify(existingData));
     },
     // Function to update an existing post in the respective category
-    updateExistingPost(existingData, updatedFormData) { 
+    updateExistingPost(existingData, updatedFormData) {
       // Update the existing post in the appropriate category
       const topHighlightsIndex = existingData.topHighlights.findIndex(
         (post) => post.postId === updatedFormData.postId
